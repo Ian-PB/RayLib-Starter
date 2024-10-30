@@ -31,14 +31,14 @@ MSG_EMSDK_FOUND			:= "emsdk package found. Skipping toolchain setup..."
 
 # Directories
 BUILD_DIR				:= ./bin
-SRC_DIR					:= ./src
+SRC_DIR					:= ./scripts/src
 WEB_DIR					:= ./web
 RAYLIB_DIR				:= ./raylib
 RAYLIB_INC				:= $(RAYLIB_DIR)/src
 RAYLIB_LIB				:= $(RAYLIB_DIR)/build/raylib
 RAYLIB_LIB_WEB			:= $(RAYLIB_DIR)/build_web/raylib
 EMSDK_DIR				:= ./emsdk
-INCLUDE_DIR             := ./include
+INCLUDE_DIR             := ./scripts/include
 
 # Game HTML Template
 HTML_TEMPLATE			:= ./template/template.html

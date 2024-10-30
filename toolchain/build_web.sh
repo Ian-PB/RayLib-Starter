@@ -66,7 +66,7 @@ fi
 # Build the web application
 info_msg "Building the web application..."
 
-if emcc ./src/main.c -o ./web/index.html \
+if emcc ./src/main.cpp -o ./web/index.html \
     -I. -I${RAYLIB_INC} \
     -L${RAYLIB_LIB_WEB} \
     -lraylib \
