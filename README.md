@@ -1,5 +1,7 @@
 # README #
 
+THIS REPO IS A COPY OF PHILIP BROUKES WORK. IT HAS BEEN EDITTED TO WORK WITH C++ INSTEAD OF C.
+
 This project is a cross-platform Makefile starter kit designed to build desktop binaries (bin/exe) and web-based versions using Raylib and Emscripten. It provides a solid foundation for developing graphical applications or games that run on Linux, Windows, and the web.
 
 ## Project Overview
