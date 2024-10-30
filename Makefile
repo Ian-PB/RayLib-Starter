@@ -117,7 +117,7 @@ else
 	WEB_APP				:= xdg-open http://localhost:8000/
 endif
 
-CFLAGS					:= -std=c++11 -Wall -Wextra -Werror -g $(INCLUDES)
+CFLAGS					:= -std=c++17 -Wall -Wextra -Werror -g $(INCLUDES)
 LIBRARIES_WEB			:= -lraylib
 WEB_TARGET				:= $(WEB_DIR)/index.html
 
