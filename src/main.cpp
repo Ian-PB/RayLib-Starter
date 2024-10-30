@@ -1,7 +1,7 @@
 #include "raylib.h"
 #include <stdio.h>
 
-#include "./scripts/include/test.h"
+#include "./include/test.h"
 
 
 int main(void) {
