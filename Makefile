@@ -63,10 +63,10 @@ OPTIMISATION_LEVEL		?= 2
 
 ifeq ($(CONFIG), debug)
 	BUILD_DIR := $(DEBUG_DIR)
-	CFLAGS := -std=c11 -Wall -Wextra -Werror -g -DDEBUG $(INCLUDES)
+	CFLAGS := -std=c++11 -Wall -Wextra -Werror -g -DDEBUG $(INCLUDES)
 else ifeq ($(CONFIG), release)
 	BUILD_DIR := $(RELEASE_DIR)
-	CFLAGS := -std=c11 -O$(OPTIMISATION_LEVEL) -DNDEBUG $(INCLUDES)
+	CFLAGS := -std=c++11 -O$(OPTIMISATION_LEVEL) -DNDEBUG $(INCLUDES)
 else
 	$(error Invalid CONFIG value: $(CONFIG))
 endif
@@ -108,8 +108,8 @@ endif
 # ----------------------------------------
 # Source files
 # ----------------------------------------
-SRC						:= $(wildcard $(SRC_DIR)/*.c)
-OBJ						:= $(SRC:$(SRC_DIR)/%.c=$(BUILD_DIR)/$(OBJECTS_DIR)/%.o)
+SRC						:= $(wildcard $(SRC_DIR)/*.cpp)
+OBJ						:= $(SRC:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/$(OBJECTS_DIR)/%.o)
 
 # ----------------------------------------
 # Build Targets
@@ -121,7 +121,7 @@ all: BUILD_TYPE := all
 all: build run
 
 # Compile object files
-$(BUILD_DIR)/$(OBJECTS_DIR)/%.o: $(SRC_DIR)/%.c
+$(BUILD_DIR)/$(OBJECTS_DIR)/%.o: $(SRC_DIR)/%.cpp
 	mkdir -p $(BUILD_DIR)/$(OBJECTS_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -170,7 +170,7 @@ build_web: install_toolchain
 	if [ -f "$(EMSDK_DIR)/emsdk_env.sh" ]; then \
 		$(call INFO_MSG, $(MSG_BUILD_WEB_EMSDK)); \
 		bash -i -c "source $(EMSDK_DIR)/emsdk_env.sh && \
-		emcc ./src/*.c -o ./$(WEB_DIR)/index.html \
+		emcc ./src/*.cpp -o ./$(WEB_DIR)/index.html \
 			-I. -I$(RAYLIB_INCLUDE) \
 			-L$(RAYLIB_LIBRARY_WEB) \
 			-lraylib \
