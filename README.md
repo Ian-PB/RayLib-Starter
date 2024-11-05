@@ -1,5 +1,7 @@
 # Raylib Starter Kit <a name="raylib-starter-kit"></a>
 
+THIS IS A COPY OF PHILIP BROUKE'S REPO. IT HAS BEEN EDITTED TO WORK WITH C++
+
 A cross-platform Makefile starter kit for building desktop and web applications using Raylib and Emscripten. This toolkit enables developers to create games that run on Linux, Windows, macOS, and web browsers from a single codebase.
 
 ## Table of Contents
