@@ -12,7 +12,7 @@ include toolchain/messages.mk
 # ----------------------------------------
 # Default Compiler and Directories
 # ----------------------------------------
-CC						:= gcc
+CC						:= g++
 
 # Directories
 DEBUG_DIR				:= ./debug
