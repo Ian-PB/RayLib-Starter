@@ -2,18 +2,15 @@
 #include "stdio.h"
 #include "../include/game.h"
 
-void InitGame() {
-    printf("Game Initialized!\n");
+void Game::init()
+{
 }
 
-void UpdateGame() {
-    DrawText("Game Updating...", 190, 260, 20, DARKBLUE);
+void Game::draw()
+{
+    DrawFPS(0, 0);
 }
 
-void DrawGame() {
-    DrawText("Hello, Raylib Starter Kit!", 190, 180, 20, DARKBLUE);
-}
-
-void CloseGame() {
-    printf("Game Closed!\n");
+void Game::update()
+{
 }
